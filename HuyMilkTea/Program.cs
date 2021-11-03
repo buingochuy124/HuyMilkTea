@@ -9,14 +9,14 @@ namespace HuyMilkTea
     {
         static void Main(string[] args)
         {
-            var milk = new ClassicMilkTea(MilkTeaSize.SmallSize);
+            var milk = MilkTeaFactory.MakeClassicMilkTea(MilkTeaSize.SmallSize);
 
-            milk.AddToppingToMilkTea(ToppingType.CreamChese);
+            milk.AddToppingToMilkTea(ToppingType.GreenAppleJelly);
 
             milk.GetBill();
 
 
-            var cacoa = new CocoaMilkTea(MilkTeaSize.BigSize);
+            var cacoa = MilkTeaFactory.MakeCocoaMilkTea(MilkTeaSize.BigSize);
             cacoa.GetBill();
             cacoa.AddToppingToMilkTea(ToppingType.WhilePearl);
             cacoa.GetBill();
